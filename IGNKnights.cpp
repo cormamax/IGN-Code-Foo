@@ -11,6 +11,16 @@
  
  You can just make not visited a boolean!!!
  
+ The variable i stands for columns and the 
+ variable j stands for rows. You have it
+ backwards in your for loops. It doesn't matter
+ now since both rows and columns = 8, but fix
+ it soon!!!
+ 
+ You'll need an array to keep track of what levels
+ have been used already
+ 
+ 
  
 */
 
@@ -22,41 +32,91 @@ using namespace std;
 
 int main(void)
 {
-	
-	
-	// declare chess board
-	spot **board;
-	board = new spot *[ROWS];
-	for (int i = 0; i < ROWS; i = i + 1)
+	// Declare the board
+	spot ***board;
+	board = new spot **[ROWS*COLUMNS];
+	for (int i = 0; i < (ROWS*COLUMNS); i = i + 1)
 	{
-		board[i] = new spot[COLUMNS];
+		board[i] = new spot *[COLUMNS];
+		for (int j = 0; j < COLUMNS; j = j + 1)
+		{
+			board[i][j] = new spot[ROWS];
+		}
 	}
-
-	// declare start and end spots
+	
+	
 	spot start;
 	start.xVal = 0;
 	start.yVal = 0;
 	
-	spot end;
-	end.xVal = 0;
-	end.yVal = 0;
+	// Use Djikstra's to find the fastest way to each spot
+	// from every other spot on the board. All source
+	// shortest path
+	int level = 0;
+	for (int i = 0; i < COLUMNS; i = i + 1)
+	{
+		start.xVal = i;
+		for (int j = 0; j < ROWS; j = j + 1) 
+		{
+			start.yVal = j;
+			Djikstra(start, board[level]);
+			level = level + 1;
+		}
+	}
 	
-		
+	cout << "Done with Djikstra" << endl;
+	// Find the shortest number of moves
+	int min = -1;
+	int dummy = -1;
+	start.xVal = 0;
+	start.yVal = 0;
+	level = 0;
 	
-	// use Djikstra's to find minimum number of moves
-	// check the psuedo code of it
-	// do you need a stack/queue to hold on to the info
-	// of which one has the least moves so you can
-	// check it next? Insert into an array based queue
-	// and when you insert, insert it in order?
+	bool touched[COLUMNS][ROWS];
+	InitTouched(touched);
 	
-	Djikstra(start, board);
+	cout << "Done initializing" << endl;
 	
-	Print(board);
+	// now actually start looking for shortest path
+	for (int i = 0; i < COLUMNS; i = i + 1)
+	{
+		start.xVal = 0;
+		for (int j = 0; j < ROWS; j = j + 1)
+		{
+			start.yVal = j;
+			level = Hash(start.xVal, start.yVal);
+			dummy = FindShortest(board, level, start, 0, touched, start);
+			
+			if (min < 0 || dummy < min)
+			{
+				min = dummy;
+			}
+		}
+	}
+	
+	// print the minimum number of moves needed
+	cout << "Minimum number of moves needed is... " << min << endl << endl;
+	
+	/*
+	spot test;
+	test.xVal = 3;
+	test.yVal = 2;
+	int i = Hash(3,2);
+	Print(board[i]);
+	*/	
+	
+	
+	for (int i = 0; i < (ROWS*COLUMNS); i = i + 1)
+	{
+		cout << "Level " << i << endl;
+		Print(board[i]);
+		cout << endl;
+	}
 	
 	
 	
 	
+	cout << board[14][3][1].num_of_moves << endl;
 	
 	
 	return 0;
