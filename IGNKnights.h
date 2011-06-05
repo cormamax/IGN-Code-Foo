@@ -13,6 +13,7 @@
 
 using namespace std;
 
+// each square on the chessboard
 struct spot 
 {
 	int xVal;
@@ -220,8 +221,8 @@ int FindShortest(spot ***board, int level, spot current, int total_moves,
 	// visited.
 	// level is the level that corresponds with current
 	
-	cout << "current Loc... ";
-	cout << "x = " << current.xVal << ", y = " << current.yVal << endl;
+	//cout << "current Loc... ";
+	//cout << "x = " << current.xVal << ", y = " << current.yVal << endl;
 	//cout << "in FindShortest, level = " << level << endl;
 	// Base Case 
 	touched[current.xVal][current.yVal] = true;
@@ -300,36 +301,6 @@ int FindShortest(spot ***board, int level, spot current, int total_moves,
 
 
 
-/*
-
-int FindShortest(spot ***board, spot current, int &total_moves)
-{
-	// Check if done
-	if (CheckDone(board))
-	{	// if this is true, you want to return the
-		// numbers of moves it took to get to this
-		// spot from its previous spot
-		
-		
-		
-	}
-	
-	board[current.xVal][current.yVal].touched = true;
-	
-	for (int i = 0; i < COLUMNS; i = i + 1)
-	{
-		current.xVal = i;
-		for (int j = 0; j < ROWS; j = j + 1) 
-		{
-			current.yVal = j;
-			total_moves = FindShortest(board, current, total_moves)
-		}
-	}
-	
-	
-
-}
-*/
 bool CheckDone(bool touched[COLUMNS][ROWS])
 {	// Checks to see if every spot has been touched
 	// returns false if any spot is false
@@ -357,56 +328,9 @@ bool CheckDone(bool touched[COLUMNS][ROWS])
 	//cout << "returned true!" << endl;
 	return true;
 }
-/*
-int Find(spot current, spot **board, int &total_moves)
-{
-	//board[current.xVal][current.yVal].touched = true;
-	
-	int i = 0;
-	int j = 0;
-	int min_moves = 10;		// the max for any move is really six
-	int min_i = -1;
-	int min_j = -1;
-	while (i < COLUMNS)
-	{
-		while (j < ROWS)
-		{
-			if (board[i][j].num_of_moves < min_moves && 
-				board[i][j].touched == false)
-			{
-				min_i = i;
-				min_j = j;
-				min_moves = board[i][j].num_of_moves
-				
-				if (min_moves == 1)
-				{	// to exit while loops
-					i = COLUMNS;
-					j = ROWS
-				}
-			}
-		}
-	}
-	
-	// if either min_i or min_j < 0 then you are done
-	if (min_i < 0) 
-	{
-		return Hash(current.xVal, current.yVal);
-	}
-	else 
-	{	total_moves = total_moves + min_moves;
-		return Hash(min_i, min_j);
-	}
-
-	
-	
-	
-	
-}
-*/
-
 
 void InitTouched(bool touched[COLUMNS][ROWS])
-{
+{	// initializes the touched array to false
 	for (int i = 0; i < COLUMNS; i = i + 1)
 	{
 		for (int j = 0; j < ROWS; j = j + 1)

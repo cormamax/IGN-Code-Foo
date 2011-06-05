@@ -7,6 +7,14 @@
  *
  */
 
+/*
+ 
+ This is an array based queue. You add to the back
+ and take out of the front.
+ 
+*/
+
+
 //#include "queue.h"
 #include <cstdlib>
 

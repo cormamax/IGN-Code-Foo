@@ -1,0 +1,35 @@
+
+
+
+
+My name is Max Corman. I am studing computer science at
+the University of Michigan. I will be entering my third year
+this fall. My GPA is 3.352 and my cumlative GPA is 3.458.
+I know C++ and am currently in the process of learning the
+Android platform. I consider myself a gamer, but find it hard
+to find the time to play all the games I want to while at 
+college.
+
+My teammates and I have created MathBlast, an educational 
+video game, as part of one of my classes. The best way to 
+describe it would be to call it Bust-A-Move, but instead 
+of matching three bubbles of the same color, you form 
+addition and subtration equations. The game is currently 
+used in that class as a sample game for incoming students 
+to look at.
+
+The titles of the files that hold my answers are below.
+I pushed everything in my folder to github, so all my 
+work is there, even if it isn't used in my final answer.
+
+1. Question 1
+2. Question 2
+3. IGNKnights.cpp
+   IGNKnights.h
+   Queue.cpp
+
+   Note: comments are in the code
+4. 
+
+
+

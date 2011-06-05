@@ -9,21 +9,25 @@
 
 /*
  
- You can just make not visited a boolean!!!
+ This is my program to find the minimum number of moves.
  
- The variable i stands for columns and the 
- variable j stands for rows. You have it
- backwards in your for loops. It doesn't matter
- now since both rows and columns = 8, but fix
- it soon!!!
+ It starts off by using Djikstra's theorem to find the quickest
+ number of moves for a knight to get from one spot to every
+ other spot. It does this for all 64 spots on the chessboard.
  
- You'll need an array to keep track of what levels
- have been used already
+ Then, I use a dynamic programming algorithm to find the 
+ minimum number of moves it takes for the knight to land
+ on every spot. This is done by finding the move that requires 
+ the least amount of moves. 
  
+ Unfortuantly, I could not come up with a way to store already
+ calculated values, so this program has very poor run time. From
+ what I can tell, my solution here calculates every possible 
+ combination of moves and then prints out the minimum. I was 
+ unable to calculate the minimum number of moves.
  
  
 */
-
 
 
 #include "IGNKnights.h"
@@ -64,7 +68,7 @@ int main(void)
 		}
 	}
 	
-	cout << "Done with Djikstra" << endl;
+	//cout << "Done with Djikstra" << endl;
 	// Find the shortest number of moves
 	int min = -1;
 	int dummy = -1;
@@ -75,7 +79,7 @@ int main(void)
 	bool touched[COLUMNS][ROWS];
 	InitTouched(touched);
 	
-	cout << "Done initializing" << endl;
+	//cout << "Done initializing" << endl;
 	
 	// now actually start looking for shortest path
 	for (int i = 0; i < COLUMNS; i = i + 1)
@@ -86,7 +90,7 @@ int main(void)
 			start.yVal = j;
 			level = Hash(start.xVal, start.yVal);
 			dummy = FindShortest(board, level, start, 0, touched, start);
-			
+			cout << "Done with i = " << i << ", j = " << j << "!" << endl;
 			if (min < 0 || dummy < min)
 			{
 				min = dummy;
@@ -105,18 +109,18 @@ int main(void)
 	Print(board[i]);
 	*/	
 	
-	
+	/*
 	for (int i = 0; i < (ROWS*COLUMNS); i = i + 1)
 	{
 		cout << "Level " << i << endl;
 		Print(board[i]);
 		cout << endl;
 	}
+	*/
 	
 	
 	
-	
-	cout << board[14][3][1].num_of_moves << endl;
+	//cout << board[14][3][1].num_of_moves << endl;
 	
 	
 	return 0;
