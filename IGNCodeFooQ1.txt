@@ -1,0 +1,34 @@
+﻿1) How many pennies could you put on the Golden Gate Bridge without any of them overlapping? For this question, please write out each step in your thought process.
+
+
+
+
+For this question, I am assuming an ideal world. So I have perfectly made pennies, no wind, no gravel, debris, cars, people, or disturbances on the bridge. Also, I am defining “overlapping” to mean no penny at any point can be touching another penny while also above it. And finally, I am also placing pennies anywhere they can fit, so super glue will probably also be needed.
+
+
+
+
+To do this problem, I do it in several steps. 
+
+
+For the first step, I’d find and get the measurements of every flat horizontal surface. Then, I’d divide the area by the proper measurements (diameter and width of the penny) so I know how many pennies I need to get if I placed them on their side, next to each other, over the entire surface. Pennies can slightly hang off the edge, as long as they don’t fall.
+
+
+For the next step, I’d find and get the measurements of every flat vertical surface. Then, I’d divide the area by the diameter and width to see how many pennies I’d need. I would also need to account for a little bit of space between rows, because the pennies can not touch. After these calculations, I’d place the pennies on the wall so that there are rows of pennies slightly above the horizontal pennies and each subsequent row on the wall is just barely above the previous row so as not to overlap.
+
+
+Next, I find all flat, slanted surfaces. I’d cover these surfaces very similarly to the vertical surfaces. I’d calculate the area, then divide by diameter, width, and extra space. Then I’d get my pennies, and place them on their sides in rows, with each subsequently higher row sightly raised so as not the touch the row below it.
+
+
+Then, I’d find all rounded surfaces. These are done pretty much the same as the other surfaces. I’d calculate the area, divide, and then place the pennies on their sides in rows over the surface. Rows are slightly raised above one another so they don’t touch.
+
+
+Then I’d move on to cyclinder type surfaces (so tall the cords and ropes). If the cord is parallel to the ground, I’d find the circumference of the cord, find how many pennies I’d need, then set the pennies on their sides in rows also parallel to the ground, running along the length of the cord. Their would be several of these rows, all around the circumference of the cord.
+
+
+Finally, for vertical cords, slanted, and bent cords, I’d measure the circumference and find out how many pennies I’d need. These will be placed slightly differently. These pennies will also be placed on their sides, but they will be placed in rings around the cord. So sides of pennies will be touching, not their flat faces. These rings will be spaced apart accordingly so as not to overlap on angled cords. These rings will cover the entire cord, also spaced ever so slightly apart.
+
+
+
+
+I know this seems very repetitive. Understand that I would not calculate every area, just what I’d need to. So if the same horizontal surface appears multiple times, I would just use my calculations from the first one. I would reuse as my of my work as possible.

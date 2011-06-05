@@ -1,0 +1,12 @@
+﻿2) Our images have a ratio of 16:9, and our design layouts have 12 pixel wide increments (there are no limits on height). Give examples of three image sizes that would have the correct ratio and would fit the design layout.
+
+
+
+
+You can have an image that is 192 pixels by 108 pixels
+
+
+You can have an image that is 384 pixels by 216 pixels
+
+
+You can have an image that is 768 pixels by 432 pixels
