@@ -18,6 +18,13 @@ addition and subtration equations. The game is currently
 used in that class as a sample game for incoming students 
 to look at.
 
+During the summers, I work at my summer camp, Tamarack 
+Camps. I have been a counselor there for 3 years, and this
+year have been hired on as a clinic assistant. During the 
+school year, I work as a Building Supervisor at my school's
+rec building. While working here I am in charge of the
+building and student employees.
+
 The titles of the files that hold my answers are below.
 I pushed everything in my folder to github, so all my 
 work is there, even if it isn't used in my final answer.
@@ -29,7 +36,7 @@ work is there, even if it isn't used in my final answer.
    Queue.cpp
 
    Note: comments are in the code
-4. 
+4. IGN Code Foo Q4
 
 
 
